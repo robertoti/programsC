@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main() {
+	
+	int nota[30], 
+	aluno = 1, media = 0, totalNotas = 0, mediaA = 0, mediaB = 0, mediaC = 0, mediaD = 0, mediaE = 0;
+	char letraNota;
+		
+	for (nota[aluno]=0; aluno <= 30 ; aluno++){
+		printf("\n\tDigite a nota do aluno %d\n", aluno);
+		printf("a=10\tb=7\tc=5\td=3\te=0\n");
+		scanf(" %c",&letraNota);
+		if((letraNota == 'a') || (letraNota == 'b') || (letraNota == 'c') || (letraNota == 'd') || (letraNota == 'e')){
+			switch(letraNota){
+				case 'a':
+				nota[aluno] = 10;
+				mediaA++;
+			break;
+			case 'b': 
+				nota[aluno] = 7;
+				mediaB++;
+			break;
+			case 'c': 
+				nota[aluno] = 5;
+				mediaC++;
+			break;
+			case 'd': 
+				nota[aluno] = 3;
+				mediaD++;
+			break;
+			case 'e': 
+				nota[aluno] = 0;
+				mediaE++;
+			break;
+		}
+	
+		printf("\nNota digitada %d", nota[aluno]);
+		totalNotas = totalNotas + nota[aluno];
+		media = totalNotas / 30;	
+		}else{
+			printf("Digite uma nota valida!");
+			aluno--;
+		}
+	}
+	printf("\nA media de todas as notas foi.:%d", media);
+	printf("\n\nO total de alunos com media A foi.:%d", mediaA);
+	printf("\nO total de alunos com media B foi.:%d", mediaB);
+	printf("\nO total de alunos com media C foi.:%d", mediaC);
+	printf("\nO total de alunos com media D foi.:%d", mediaD);
+	printf("\nO total de alunos com media E foi.:%d", mediaE);
+	return 0;
+}
