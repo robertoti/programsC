@@ -11,37 +11,36 @@ int main() {
 		printf("\n\tDigite a nota do aluno %d\n", aluno);
 		printf("a=10\tb=7\tc=5\td=3\te=0\tq=sair\n");
 		scanf(" %c",&letraNota);
-			switch(letraNota){
-				case 'a':
-					nota[aluno] = 10;
-					mediaA++;
-				break;
-				case 'b': 
-					nota[aluno] = 7;
-					mediaB++;
-				break;
-				case 'c': 
-					nota[aluno] = 5;
-					mediaC++;
-				break;
-				case 'd': 
-					nota[aluno] = 3;
-					mediaD++;
-				break;
-				case 'e': 
-					nota[aluno] = 0;
-					mediaE++;
-				break;
-				case 'q':
-					printf("Obrigado por usar o programa!\nFaca uma doacao e ajude esse projeto!\n");
-					aluno--;
-					exit(0);
-				break;
-				default:
-					printf("Digite uma nota valida!\n");
-					system("pause");
-					aluno--;
-					
+		switch(letraNota){
+			case 'a':
+				nota[aluno] = 10;
+				mediaA++;
+			break;
+			case 'b': 
+				nota[aluno] = 7;
+				mediaB++;
+			break;
+			case 'c': 
+				nota[aluno] = 5;
+				mediaC++;
+			break;
+			case 'd': 
+				nota[aluno] = 3;
+				mediaD++;
+			break;
+			case 'e': 
+				nota[aluno] = 0;
+				mediaE++;
+			break;
+			case 'q':
+				printf("Obrigado por usar o programa!\nFaca uma doacao e ajude esse projeto!\n");
+				aluno--;
+				exit(0);
+			break;
+			default:
+				printf("Digite uma nota valida!\n");
+				system("pause");
+				aluno--;
 			}
 			system("cls");
 			printf("Nota do aluno %d foi %d\n", aluno, nota[aluno]);
